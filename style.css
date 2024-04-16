@@ -1,0 +1,638 @@
+/*********gamecss********/
+
+#screen {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/******** knapper ************/
+#genstart1 {
+  position: absolute;
+  width: 23%;
+  height: 21%;
+  top: 60%;
+  left: 55%;
+  background-image: url(assets/play_again.svg);
+  animation-name: bounce_kf;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  cursor: pointer;
+  z-index: 150;
+  background-size: cover;
+}
+#genstart2 {
+  position: absolute;
+  width: 23%;
+  height: 21%;
+  top: 60%;
+  left: 40%;
+  background-image: url(assets/play_again.svg);
+  animation-name: bounce_kf;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  cursor: pointer;
+  z-index: 150;
+  background-size: cover;
+}
+
+#start_knap {
+  position: absolute;
+  width: 23%;
+  height: 21%;
+  top: 42%;
+  left: 39%;
+  background-image: url(assets/start.svg);
+  animation-name: bounce_kf;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  cursor: pointer;
+  z-index: 150;
+  background-size: cover;
+}
+
+@keyframes bounce_kf {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+#start {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-image: url(assets/start_screen.svg);
+  background-size: cover;
+}
+
+#start_txt {
+  position: absolute;
+  top: 90%;
+  left: 48%;
+  font-size: 2.2cqw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: darkmagenta;
+}
+
+#game_over {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-image: url(assets/gameover_screen.svg);
+  background-size: cover;
+}
+#level_complete {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-image: url(assets/win_screen_1.svg);
+  background-size: cover;
+}
+
+#game_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(assets/baggrund_med.svg);
+  background-size: cover;
+}
+#game_elements {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+#game_foreground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*background-image: ;*/
+  background-size: cover;
+  pointer-events: none;
+}
+
+#game_ui {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/********* gode elements***/
+
+#boba1_container {
+  position: absolute;
+  width: 12%;
+  aspect-ratio: 7/8;
+  top: -35%;
+}
+#boba1_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/pink_boba.svg);
+  background-size: cover;
+}
+
+#boba2_container {
+  position: absolute;
+  width: 12%;
+  aspect-ratio: 7/8;
+  top: -35%;
+}
+#boba2_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/purple_boba.svg);
+  background-size: cover;
+}
+
+/******** bad elements********/
+
+#carrot_container {
+  position: absolute;
+  width: 12%;
+  aspect-ratio: 5/7;
+  top: -49%;
+}
+
+#carrot_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/carrot.svg);
+  background-size: cover;
+}
+
+#broccoli_container {
+  position: absolute;
+  width: 15%;
+  aspect-ratio: 5/5;
+  top: -49%;
+}
+
+#broccoli_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/brocoli.svg);
+  background-size: cover;
+}
+/*********** fald boba *************/
+
+.fald {
+  animation-name: fald_kf;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+@keyframes fald_kf {
+  0% {
+  }
+
+  100% {
+    transform: translateY(550%);
+  }
+}
+
+/*********** forsvind boba *****/
+
+.forsvind_boba {
+  animation-name: forsvind_boba_kf;
+  animation-duration: 1s;
+  opacity: 0%;
+}
+
+@keyframes forsvind_boba_kf {
+  0% {
+    opacity: 100%;
+    scale: 1;
+  }
+  20% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 0;
+    opacity: 0%;
+  }
+}
+
+/*********** forsvind ond ************/
+
+.forsvind_carrot {
+  animation-name: forsvind_carrot_kf;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+@keyframes forsvind_carrot_kf {
+  0% {
+  }
+  100% {
+    opacity: 0%;
+    rotate: 360deg;
+  }
+}
+
+/*********** frys animation***********/
+
+.frys {
+  animation-play-state: paused;
+}
+/*************** Positioner ********/
+
+.pos1 {
+  left: 10%;
+}
+
+.pos2 {
+  left: 20%;
+}
+
+.pos3 {
+  left: 30%;
+}
+
+.pos4 {
+  left: 40%;
+}
+.pos5 {
+  left: 50%;
+}
+
+.pos6 {
+  left: 60%;
+}
+
+.pos7 {
+  left: 65%;
+}
+
+.pos8 {
+  left: 73%;
+}
+
+.pos9 {
+  left: 80%;
+}
+
+/************ Delay ************/
+
+.delay1 {
+  animation-delay: 0s;
+}
+.delay2 {
+  animation-delay: 0.3s;
+}
+.delay3 {
+  animation-delay: 0.6s;
+}
+.delay4 {
+  animation-delay: 0.9s;
+}
+
+/*********** timer *************/
+
+.time {
+  animation-name: time_kf;
+  animation-duration: 20s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes time_kf {
+  0% {
+    clip-path: inset(0 0 0);
+  }
+  100% {
+    clip-path: inset(100% 0 0);
+  }
+}
+
+#time_container {
+  position: absolute;
+  width: 5%;
+  aspect-ratio: 3/13;
+  top: 1%;
+  left: 92%;
+}
+#time_fill {
+  position: absolute;
+  background-image: url(assets/timer_fill.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+#time_frame {
+  position: absolute;
+  background-image: url(assets/timer_frame.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+/*********** Liv ***********/
+
+#life_board {
+  position: absolute;
+  width: 14%;
+  aspect-ratio: 30/30;
+  top: 76%;
+  left: 85%;
+  background-image: url(assets/liv.svg);
+  background-size: cover;
+  container-type: inline-size;
+}
+
+#liv {
+  font-size: 20cqw;
+  position: absolute;
+  top: 26%;
+  left: 50%;
+}
+
+/********** score board *************/
+
+#score_board {
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 50/30;
+  top: 78%;
+  left: 3%;
+  background-image: url(assets/boba_counter.svg);
+  background-size: cover;
+  z-index: 10;
+  container-type: inline-size;
+}
+
+#point {
+  font-size: 15cqw;
+  position: absolute;
+
+  top: 25%;
+  left: 64%;
+  z-index: 11;
+}
+/*********** boba buddy *********/
+
+#boba_buddy {
+  width: 20%;
+  aspect-ratio: 13/21;
+  top: 29%;
+  left: 7%;
+  background-image: url(assets/boba_buddy_extra.svg);
+  background-size: cover;
+  position: absolute;
+}
+
+/**** HIDE *****/
+
+.hide {
+  display: none;
+}
+
+/****** slut point ******/
+
+#game_over_point {
+  position: absolute;
+  top: 46%;
+  left: 52%;
+  font-size: 4cqw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#level_complete_point {
+  position: absolute;
+  top: 46%;
+  left: 39%;
+  font-size: 4cqw;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+/****************************** Spil CSS SLUT ***************************************/
+body {
+  background-color: #f0fdee;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #b1dab8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+@media (min-width: 750px) {
+  .logo img {
+    width: 70px;
+    height: 70px;
+  }
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa";
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #6073a6;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #e74676;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #6073a6;
+  margin-bottom: 5px;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #b1dab8;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: "chaloops", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 200%;
+  color: #506685;
+  place-self: center;
+}
+.overskrift {
+  font-family: "chaloops", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 300%;
+  color: #506685;
+  place-self: center;
+}
+
+img {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 2%;
+}
+.grid_timer {
+  width: 20%;
+  gap: 10%;
+}
+
+.grid_boba {
+  width: 50%;
+  gap: 10%;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 120%;
+  color: #506685;
+  padding: 1%;
+}
+
+@media (min-width: 750px) {
+  .overskrift_grid {
+    display: grid;
+    place-self: center;
+    grid-template-columns: 1fr;
+  }
+
+  .grid_1-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+  }
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1%;
+  }
+  .grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    gap: 1%;
+  }
+  .grid_timer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid_boba {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

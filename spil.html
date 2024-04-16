@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Spil</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="spil.html">Spil</a></li>
+                <li><a href="assets.html">Assets</a></li>
+                <li><a href="grafik.html">Grafik</a></li>
+                <li><a href="teknik.html">Teknik</a></li>
+
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="screen">
+            <div id="game">
+                <div id="game_background"></div>
+                <div id="game_elements">
+
+
+                    <div id="boba1_container" class="">
+                        <div id="boba1_sprite" class=""></div>
+                    </div>
+                    <div id="boba2_container" class="">
+                        <div id="boba2_sprite" class=""></div>
+                    </div>
+
+                    <div id="carrot_container" class="">
+
+                        <div id="carrot_sprite" class=""></div>
+                    </div>
+                    <div id="broccoli_container" class="">
+
+                        <div id="broccoli_sprite" class=""></div>
+                    </div>
+
+                </div>
+
+                <div id="game_foreground">
+
+                </div>
+
+                <div id="game_ui">
+
+                    <div id="score_board">
+                        <h1 id="point"> 0 </h1>
+                    </div>
+
+                    <div id="life_board">
+                        <h1 id="liv"><span>3</span> </h1>
+                    </div>
+
+
+                    <div id="time_board">
+                        <div id="time_container">
+                            <div id="time_frame"></div>
+                            <div id="time_fill"></div>
+                        </div>
+                    </div>
+
+                    <div id="boba_buddy"></div>
+                </div>
+            </div>
+            <div id="start">
+                <div id="start_knap"></div>
+                <div id="start_txt">Saml mindst 15 boba kugler før tiden løber ud</div>
+
+            </div>
+            <div id="game_over">
+                <div id="game_over_point">Du fik kun <span>0</span> point</div>
+                <div id="genstart1"></div>
+            </div>
+            <div id="level_complete">
+                <div id="level_complete_point">Du fik <span>0</span> point</div>
+                <div id="genstart2"></div>
+            </div>
+        </div>
+
+        <div id="sounds">
+            <audio src="lyde/oww1.mp3" id="sound_bad1"></audio>
+            <audio src="lyde/oww2.mp3" id="sound_bad2"></audio>
+            <audio src="lyde/wee.mp3" id="sound_good3"></audio>
+            <audio src="lyde/yay1.mp3" id="sound_good1"></audio>
+            <audio src="lyde/yay2.mp3" id="sound_good2"></audio>
+            <audio src="lyde/happy-airlines-ym-2413-28411.mp3" id="musik"></audio>
+
+
+        </div>
+        <script src="spil.js"></script>
+        <script src="menu.js"></script>
+    </main>
+</body>
+
+</html>
